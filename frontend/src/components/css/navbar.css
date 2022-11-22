@@ -1,0 +1,10 @@
+.NavBar {
+    background-color: rgb(108, 43, 178);
+    width: 100%;
+    height:100px;
+}
+
+.NavBar h1 {
+    color: white;
+    padding: 20px 10px;
+}
