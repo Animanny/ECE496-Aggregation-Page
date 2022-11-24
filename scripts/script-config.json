@@ -1,0 +1,13 @@
+{
+    "clang-plugins": {
+      "libmy-global-variable-plugin": "",
+      "libmy-library-catch-plugin": "unordered-map"
+    },
+    "make_args": [
+      "-Wall"
+    ],
+    "make_cfiles": [
+      "test"
+    ],
+    "make_progname": "test"
+}
