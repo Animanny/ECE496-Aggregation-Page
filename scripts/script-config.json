@@ -1,7 +1,7 @@
 {
     "clang-plugins": {
-      "libmy-global-variable-plugin": "",
-      "libmy-library-catch-plugin": "unordered-map"
+      "globalVarPlugin": "",
+      "libraryCatchPlugin": "unordered-map"
     },
     "make_args": [
       "-Wall"
