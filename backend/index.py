@@ -1,10 +1,20 @@
 import os
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, jsonify, request
+from flask_restful import Api,Resource, reqparse
 
+import config
+import controller
 app = Flask(__name__, static_folder='../frontend/build')
-
+app.config['ENV'] = 'development'
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
 # Serve React App
+config.init_app(app)
+config.init_cors(app)
 
+# API Endpoints
+rest_api = Api(app)
+rest_api.add_resource(controller.ScriptGenerator, '/scriptgen')
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
