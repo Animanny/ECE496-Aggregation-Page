@@ -1,7 +1,7 @@
-CC = clang
+CC = clang++
 CFLAGS = -Wall
 LDFLAGS =
-OBJFILES = test.o
+OBJFILES = test.o test2.o
 TARGET = test
 all: $(TARGET)
 $(TARGET): $(OBJFILES)

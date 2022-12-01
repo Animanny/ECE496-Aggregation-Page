@@ -35,7 +35,7 @@ for file in fileList:
         print(f"### Running {plugin} check ###\n")
         argString = ''
         if pluginArg != '': argString = f" -fplugin-arg-{plugin}-{pluginArg}"
-        output=subprocess.getoutput(f"clang -fplugin={plugin}.so{argString} -c {file}.c")
+        output=subprocess.getoutput(f"clang -fplugin={plugin}.so{argString} -c {file}.cpp")
         print(output)
         if("Error" in output): testsPassed = False
 
